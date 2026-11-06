@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   ArrowDown,
-  Sparkles,
+  // Sparkles,
   Mail,
   ArrowUpRight,
   Download,
@@ -15,7 +15,8 @@ import { HeroScratchCanvas } from './HeroScratchCanvas';
 import { PROFILE } from '../data/profile';
 
 export const HeroSection: React.FC = () => {
-  const [scratched, setScratched] = useState(false);
+  // const [scratched, setScratched] = useState(false);
+  const [, setScratched] = useState(false);
 
   const socialProfiles = [
     {
