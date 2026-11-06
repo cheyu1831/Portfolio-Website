@@ -6,76 +6,77 @@ import { PROFILE } from '../data/profile';
 
 export const AboutSection: React.FC = () => {
   return (
-    <section id="about" className="relative py-24 sm:py-32 bg-midnight border-t border-mutedNavy/40">
+    <section id="about" className="relative py-32 sm:py-40 bg-midnight border-t border-borderNavy/60">
       <div className="max-w-7xl mx-auto px-6 sm:px-12 md:px-16 lg:px-24">
         <SectionHeading
           number="01"
-          eyebrow="Profile & Philosophy"
-          title="Engineering Intelligent Systems with Purpose."
-          subtitle="Specializing in privacy-preserving machine learning, high-performance Python backends, and applied AI systems."
+          eyebrow="Profile & Background"
+          title="Engineering Practical Intelligent Systems"
+          subtitle="Experienced in backend architecture, privacy-preserving machine learning, and full-stack software development."
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Narrative & Focus Areas */}
-          <div className="lg:col-span-7 space-y-6">
+          <div className="lg:col-span-7 space-y-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-base sm:text-lg text-warmWhite/85 leading-relaxed space-y-4"
+              transition={{ duration: 0.5 }}
+              className="text-sm sm:text-base text-slate-300 leading-relaxed space-y-4 font-mono"
             >
               <p>
-                I'm a <span className="text-softBlush font-semibold">Python Developer and aspiring AI/ML Engineer</span> passionate about building intelligent applications and scalable backend systems. My experience includes developing backend solutions using <span className="text-warmWhite font-medium underline decoration-softBlush/40 underline-offset-4">FastAPI</span> at Hexaware Technologies, working with machine learning models, and exploring privacy-preserving AI through <span className="text-warmWhite font-medium underline decoration-softBlush/40 underline-offset-4">Federated Learning</span>.
+                I am a <span className="text-cyan-400 font-medium">Python Developer and aspiring AI/ML Engineer</span> focused on building intelligent applications and scalable backend systems. My experience spans developing backend services using <span className="text-white font-medium">FastAPI</span> at Hexaware Technologies, training machine learning models, and exploring privacy-preserving AI with <span className="text-white font-medium">Federated Learning</span>.
               </p>
 
               <p>
-                I enjoy solving practical engineering problems, from building REST APIs and integrating databases to experimenting with neural networks, data processing, and <span className="text-warmWhite font-medium underline decoration-softBlush/40 underline-offset-4">Generative AI</span>.
+                I focus on solving concrete engineering challenges: designing robust asynchronous REST APIs, structuring relational databases, experimenting with neural networks, and developing evidence-grounded <span className="text-white font-medium">Generative AI</span> workflows.
               </p>
 
-              <p className="text-warmWhite/75 text-sm sm:text-base">
-                My goal is to develop reliable, efficient, and maintainable software that turns complex technical ideas into useful real-world solutions.
+              <p className="text-slate-400">
+                My objective is to build clean, maintainable, and reliable software that bridges theoretical machine learning with production environments.
               </p>
             </motion.div>
-            {/* Core Pillars / Problem-Solving Approach */}
-            <div className="pt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="p-4 rounded-xl bg-deepNavy/70 border border-softBlush/10 hover:border-softBlush/25 transition-all">
-                <div className="flex items-center gap-3 mb-2 text-softBlush">
-                  <Shield className="w-5 h-5 text-softBlush" />
-                  <h4 className="font-semibold text-sm text-warmWhite">Privacy-Preserving AI</h4>
+
+            {/* Core Pillars Grid */}
+            <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="p-6 rounded-xl bg-deepNavy/80 border border-borderNavy hover:border-blue-500/30 transition-all">
+                <div className="flex items-center gap-2.5 mb-2.5">
+                  <Shield className="w-4 h-4 text-cyan-400" />
+                  <h4 className="font-semibold text-sm text-white font-mono">Privacy-Preserving AI</h4>
                 </div>
-                <p className="text-xs text-warmWhite/70 leading-relaxed">
-                  Decentralized model training via Federated Learning and Differential Privacy, protecting sensitive financial and user datasets.
+                <p className="text-xs text-slate-400 leading-relaxed font-mono">
+                  Decentralized model training via Federated Learning (Flower) and Differential Privacy guarantees.
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-deepNavy/70 border border-softBlush/10 hover:border-softBlush/25 transition-all">
-                <div className="flex items-center gap-3 mb-2 text-softBlush">
-                  <Cpu className="w-5 h-5 text-softBlush" />
-                  <h4 className="font-semibold text-sm text-warmWhite">Robust Backend Architecture</h4>
+              <div className="p-6 rounded-xl bg-deepNavy/80 border border-borderNavy hover:border-blue-500/30 transition-all">
+                <div className="flex items-center gap-2.5 mb-2.5">
+                  <Cpu className="w-4 h-4 text-blue-400" />
+                  <h4 className="font-semibold text-sm text-white font-mono">Backend Architecture</h4>
                 </div>
-                <p className="text-xs text-warmWhite/70 leading-relaxed">
-                  Asynchronous REST microservices with FastAPI, Pydantic type safety, scalable messaging, and relational database schemas.
+                <p className="text-xs text-slate-400 leading-relaxed font-mono">
+                  Asynchronous REST microservices with FastAPI, Pydantic type safety, and relational database schemas.
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-deepNavy/70 border border-softBlush/10 hover:border-softBlush/25 transition-all">
-                <div className="flex items-center gap-3 mb-2 text-softBlush">
-                  <Network className="w-5 h-5 text-softBlush" />
-                  <h4 className="font-semibold text-sm text-warmWhite">Applied Machine Learning</h4>
+              <div className="p-6 rounded-xl bg-deepNavy/80 border border-borderNavy hover:border-blue-500/30 transition-all">
+                <div className="flex items-center gap-2.5 mb-2.5">
+                  <Network className="w-4 h-4 text-cyan-400" />
+                  <h4 className="font-semibold text-sm text-white font-mono">Applied Machine Learning</h4>
                 </div>
-                <p className="text-xs text-warmWhite/70 leading-relaxed">
-                  Practical end-to-end model pipelines using PyTorch, TensorFlow, Scikit-learn, Computer Vision, and Generative AI.
+                <p className="text-xs text-slate-400 leading-relaxed font-mono">
+                  End-to-end pipelines using PyTorch, TensorFlow, Scikit-learn, Computer Vision, and RAG architectures.
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-deepNavy/70 border border-softBlush/10 hover:border-softBlush/25 transition-all">
-                <div className="flex items-center gap-3 mb-2 text-softBlush">
-                  <Sparkles className="w-5 h-5 text-softBlush" />
-                  <h4 className="font-semibold text-sm text-warmWhite">Continuous Innovation</h4>
+              <div className="p-6 rounded-xl bg-deepNavy/80 border border-borderNavy hover:border-blue-500/30 transition-all">
+                <div className="flex items-center gap-2.5 mb-2.5">
+                  <Sparkles className="w-4 h-4 text-blue-400" />
+                  <h4 className="font-semibold text-sm text-white font-mono">Technical Leadership</h4>
                 </div>
-                <p className="text-xs text-warmWhite/70 leading-relaxed">
-                  Leadership as Secretary of DevDynasty Technical Club, active hackathon prototyping, and research paper presentations.
+                <p className="text-xs text-slate-400 leading-relaxed font-mono">
+                  Secretary of DevDynasty Technical Club, active hackathon prototyping, and research paper presentations.
                 </p>
               </div>
             </div>
@@ -84,87 +85,87 @@ export const AboutSection: React.FC = () => {
           {/* Right Column: Interactive Profile Console Card */}
           <div className="lg:col-span-5">
             <motion.div
-              initial={{ opacity: 0, scale: 0.98 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="rounded-2xl bg-deepNavy/90 border border-softBlush/15 p-6 shadow-2xl backdrop-blur-xl relative overflow-hidden"
+              transition={{ duration: 0.5, delay: 0.15 }}
+              className="rounded-xl bg-deepNavy border border-borderNavy p-6 shadow-sm relative overflow-hidden"
             >
               {/* Terminal Header */}
-              <div className="flex items-center justify-between pb-4 border-b border-softBlush/10 mb-5">
+              <div className="flex items-center justify-between pb-4 border-b border-borderNavy mb-5">
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-red-500/80" />
-                  <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
-                  <div className="w-3 h-3 rounded-full bg-green-500/80" />
-                  <span className="ml-2 font-mono text-xs text-warmWhite/50">engineer_profile.py</span>
+                  <div className="w-2.5 h-2.5 rounded-full bg-slate-700" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-slate-700" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-slate-700" />
+                  <span className="ml-2 font-mono text-xs text-slate-400">developer_spec.py</span>
                 </div>
-                <Terminal className="w-4 h-4 text-softBlush/60" />
+                <Terminal className="w-3.5 h-3.5 text-cyan-400" />
               </div>
 
               {/* Code Snippet */}
-              <div className="font-mono text-xs space-y-3 leading-relaxed">
+              <div className="font-mono text-xs space-y-2.5 leading-relaxed">
                 <div>
-                  <span className="text-softBlush">class</span>{' '}
-                  <span className="text-warmWhite font-bold">ShreyaSonpavane</span>:
+                  <span className="text-blue-400">class</span>{' '}
+                  <span className="text-white font-medium">ShreyaSonpavane</span>:
                 </div>
-                <div className="pl-4 space-y-1 text-warmWhite/70">
+                <div className="pl-4 space-y-1.5 text-slate-400">
                   <div>
-                    <span className="text-mutedNavy-300 text-warmWhite/50"># Identity & Credentials</span>
+                    <span className="text-slate-600"># Core Spec</span>
                   </div>
                   <div>
-                    <span className="text-softBlush/80">education</span> ={' '}
-                    <span className="text-emerald-300">"B.Tech Information Technology"</span>
+                    <span className="text-slate-300">education</span> ={' '}
+                    <span className="text-cyan-300">"B.Tech Information Technology"</span>
                   </div>
                   <div>
-                    <span className="text-softBlush/80">institution</span> ={' '}
-                    <span className="text-emerald-300">"Meenakshi Sundararajan Eng. College"</span>
+                    <span className="text-slate-300">institution</span> ={' '}
+                    <span className="text-cyan-300">"Meenakshi Sundararajan Eng. College"</span>
                   </div>
                   <div>
-                    <span className="text-softBlush/80">internships</span> = [
-                    <span className="text-emerald-300">"Hexaware Technologies"</span>,{' '}
-                    <span className="text-emerald-300">"Intelizign"</span>]
+                    <span className="text-slate-300">internships</span> = [
+                    <span className="text-blue-300">"Hexaware Technologies"</span>,{' '}
+                    <span className="text-blue-300">"Intelizign"</span>]
                   </div>
                   <div>
-                    <span className="text-softBlush/80">club_role</span> ={' '}
-                    <span className="text-emerald-300">"Secretary @ DevDynasty"</span>
+                    <span className="text-slate-300">leadership</span> ={' '}
+                    <span className="text-blue-300">"Secretary @ DevDynasty"</span>
                   </div>
                   <div>
-                    <span className="text-softBlush/80">core_stack</span> = [
-                    <span className="text-amber-300">"Python"</span>,{' '}
-                    <span className="text-amber-300">"FastAPI"</span>,{' '}
-                    <span className="text-amber-300">"TensorFlow"</span>,{' '}
-                    <span className="text-amber-300">"Flower"</span>]
+                    <span className="text-slate-300">stack</span> = [
+                    <span className="text-emerald-300">"Python"</span>,{' '}
+                    <span className="text-emerald-300">"FastAPI"</span>,{' '}
+                    <span className="text-emerald-300">"TensorFlow"</span>,{' '}
+                    <span className="text-emerald-300">"Flower"</span>]
                   </div>
                   <div className="pt-2">
-                    <span className="text-softBlush/80">current_mission</span> ={' '}
-                    <span className="text-warmWhite/90">
+                    <span className="text-slate-300">focus</span> ={' '}
+                    <span className="text-slate-200">
                       "Building privacy-first AI & resilient cloud microservices."
                     </span>
                   </div>
                 </div>
               </div>
 
-              {/* Key Quick Facts Footer */}
-              <div className="mt-6 pt-5 border-t border-softBlush/10 grid grid-cols-2 gap-4">
+              {/* Quick Spec Footer */}
+              <div className="mt-6 pt-5 border-t border-borderNavy grid grid-cols-2 gap-4">
                 <div>
-                  <span className="block text-[11px] font-mono uppercase tracking-wider text-warmWhite/50">
+                  <span className="block text-[11px] font-mono text-slate-500">
                     Primary Domain
                   </span>
-                  <span className="font-semibold text-sm text-softBlush">
+                  <span className="font-medium text-xs text-cyan-400 font-mono mt-0.5 block">
                     AI/ML & Python Backend
                   </span>
                 </div>
                 <div>
-                  <span className="block text-[11px] font-mono uppercase tracking-wider text-warmWhite/50">
+                  <span className="block text-[11px] font-mono text-slate-500">
                     LeetCode
                   </span>
                   <a
                     href={PROFILE.socials.leetcode}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-mono text-sm text-warmWhite hover:text-softBlush underline decoration-softBlush/30"
+                    className="font-mono text-xs text-slate-200 hover:text-cyan-300 transition-colors mt-0.5 block"
                   >
-                    @shreya1831
+                    @shreya1831 ↗
                   </a>
                 </div>
               </div>

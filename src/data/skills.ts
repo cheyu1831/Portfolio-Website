@@ -54,7 +54,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
       { name: "PostgreSQL", featured: true, categoryTag: "RDBMS" },
       { name: "MongoDB", featured: true, categoryTag: "NoSQL" },
       { name: "MySQL", featured: true, categoryTag: "RDBMS" },
-      { name: "SQLite", featured: false, categoryTag: "Embedded" }
+      // { name: "SQLite", featured: false, categoryTag: "Embedded" }
     ]
   },
   {

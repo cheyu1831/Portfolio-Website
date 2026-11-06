@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ArrowUpRight, Code2 } from 'lucide-react';
+import { Menu, X, ArrowUpRight, Code2, Download } from 'lucide-react';
 import { PROFILE } from '../data/profile';
 
 const NAV_ITEMS = [
@@ -9,6 +9,7 @@ const NAV_ITEMS = [
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
   { label: 'Experience', href: '#experience' },
+  { label: 'Education', href: '#education' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -21,7 +22,6 @@ export const Navbar: React.FC = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 40);
 
-      // Determine active section based on scroll position
       const sections = NAV_ITEMS.map((item) => item.href.substring(1));
       const scrollPosition = window.scrollY + 200;
 
@@ -42,7 +42,7 @@ export const Navbar: React.FC = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-midnight/85 backdrop-blur-md border-b border-softBlush/10 py-3.5 shadow-glow-navy'
+          ? 'bg-midnight/90 backdrop-blur-md border-b border-borderNavy/70 py-3.5 shadow-sm'
           : 'bg-transparent py-5 sm:py-6'
       }`}
     >
@@ -50,39 +50,36 @@ export const Navbar: React.FC = () => {
         {/* Monogram / Brand */}
         <a
           href="#hero"
-          className="group flex items-center gap-2.5 text-warmWhite hover:text-softBlush transition-colors"
+          className="group flex items-center gap-3 text-white transition-colors"
         >
-          <div className="w-8 h-8 rounded-lg bg-deepNavy border border-softBlush/20 flex items-center justify-center font-mono text-xs font-bold text-softBlush group-hover:border-softBlush/50 transition-colors shadow-sm">
+          <div className="w-8 h-8 rounded-md bg-deepNavy border border-blue-500/30 flex items-center justify-center font-mono text-xs font-semibold text-blue-400 group-hover:border-blue-400 group-hover:text-cyan-300 transition-colors">
             SV
           </div>
           <div className="flex flex-col">
-            <span className="font-semibold text-sm tracking-tight text-warmWhite group-hover:text-softBlush transition-colors">
-              SHREYA
-            </span>
-            <span className="text-[10px] font-mono uppercase tracking-widest text-warmWhite/50">
-              AI / ML & Python
+            <span className="font-semibold text-sm tracking-tight text-white group-hover:text-blue-400 transition-colors font-mono">
+              shreya.dev
             </span>
           </div>
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-1 lg:gap-2 px-3 py-1.5 rounded-full bg-deepNavy/60 border border-softBlush/10 backdrop-blur-md">
+        <nav className="hidden md:flex items-center gap-1 lg:gap-2 px-3 py-1.5 rounded-lg bg-deepNavy/70 border border-borderNavy/80 backdrop-blur-md">
           {NAV_ITEMS.map((item) => {
             const isActive = activeSection === item.href.substring(1);
             return (
               <a
                 key={item.href}
                 href={item.href}
-                className={`relative px-3.5 py-1.5 text-xs font-mono uppercase tracking-wider transition-colors rounded-full ${
+                className={`relative px-3.5 py-1.5 text-xs font-mono tracking-wide transition-colors rounded-md ${
                   isActive
-                    ? 'text-softBlush font-semibold'
-                    : 'text-warmWhite/70 hover:text-warmWhite'
+                    ? 'text-cyan-300 font-medium'
+                    : 'text-slate-400 hover:text-white'
                 }`}
               >
                 {isActive && (
                   <motion.div
                     layoutId="activeNavIndicator"
-                    className="absolute inset-0 bg-mutedNavy/80 rounded-full border border-softBlush/25 -z-10"
+                    className="absolute inset-0 bg-blue-950/60 rounded-md border border-blue-500/30 -z-10"
                     transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                   />
                 )}
@@ -92,25 +89,31 @@ export const Navbar: React.FC = () => {
           })}
         </nav>
 
-        {/* Right CTA / External Quick Links */}
+        {/* Right CTA: LeetCode & Download Resume */}
         <div className="hidden sm:flex items-center gap-3">
           <a
             href={PROFILE.socials.leetcode}
             target="_blank"
             rel="noopener noreferrer"
             title="LeetCode Profile: shreya1831"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono text-warmWhite/70 hover:text-softBlush border border-softBlush/10 hover:border-softBlush/30 transition-all bg-deepNavy/40"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-mono text-slate-300 hover:text-cyan-300 border border-borderNavy/80 hover:border-cyan-500/30 transition-all bg-deepNavy/50 hover:-translate-y-0.5"
           >
-            <Code2 className="w-3.5 h-3.5 text-softBlush" />
+            <Code2 className="w-3.5 h-3.5 text-cyan-400" />
             <span>LeetCode</span>
             <ArrowUpRight className="w-3 h-3 opacity-60" />
           </a>
 
+          {/* Resume Download Button */}
           <a
-            href="#contact"
-            className="px-4 py-2 rounded-lg bg-softBlush text-midnight text-xs font-semibold tracking-wide hover:bg-white transition-all shadow-sm active:scale-95"
+            href="/shreya-resume.pdf"
+            download="Shreya_Sonpavane_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Download Shreya Sonpavane's Resume (PDF)"
+            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-md bg-blue-600 hover:bg-blue-500 text-white text-xs font-mono font-medium tracking-wide transition-all active:scale-95 shadow-sm hover:shadow-blue-500/20 hover:-translate-y-0.5"
           >
-            Connect
+            <Download className="w-3.5 h-3.5 text-blue-100" />
+            <span>Resume</span>
           </a>
         </div>
 
@@ -118,7 +121,7 @@ export const Navbar: React.FC = () => {
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle navigation menu"
-          className="md:hidden p-2 rounded-lg text-warmWhite/80 hover:text-warmWhite hover:bg-deepNavy border border-softBlush/10 transition-colors"
+          className="md:hidden p-2 rounded-md text-slate-300 hover:text-white hover:bg-deepNavy border border-borderNavy/80 transition-colors"
         >
           {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
@@ -131,45 +134,49 @@ export const Navbar: React.FC = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.25 }}
-            className="md:hidden bg-deepNavy/95 border-b border-softBlush/15 backdrop-blur-xl px-6 py-6"
+            transition={{ duration: 0.2 }}
+            className="md:hidden bg-deepNavy/95 border-b border-borderNavy/90 backdrop-blur-xl px-6 py-5"
           >
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-2">
               {NAV_ITEMS.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`text-sm font-mono uppercase tracking-wider py-2 px-3 rounded-md transition-colors ${
+                  className={`text-sm font-mono py-2.5 px-3 rounded-md transition-colors ${
                     activeSection === item.href.substring(1)
-                      ? 'text-softBlush bg-mutedNavy/50 font-semibold'
-                      : 'text-warmWhite/70 hover:text-warmWhite hover:bg-mutedNavy/30'
+                      ? 'text-cyan-300 bg-blue-950/60 font-medium border border-blue-500/20'
+                      : 'text-slate-300 hover:text-white hover:bg-mutedNavy/40'
                   }`}
                 >
                   {item.label}
                 </a>
               ))}
 
-              <div className="pt-4 border-t border-softBlush/10 flex flex-col gap-3">
+              <div className="pt-4 border-t border-borderNavy/80 flex flex-col gap-2.5 mt-2">
                 <a
                   href={PROFILE.socials.leetcode}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between text-xs font-mono text-warmWhite/80 py-2 px-3 rounded bg-mutedNavy/40"
+                  className="flex items-center justify-between text-xs font-mono text-slate-300 py-2.5 px-3 rounded-md bg-midnight/60 border border-borderNavy/80"
                 >
                   <span className="flex items-center gap-2">
-                    <Code2 className="w-4 h-4 text-softBlush" />
+                    <Code2 className="w-4 h-4 text-cyan-400" />
                     LeetCode Profile (shreya1831)
                   </span>
                   <ArrowUpRight className="w-4 h-4" />
                 </a>
 
                 <a
-                  href="#contact"
+                  href="/shreya-resume.pdf"
+                  download="Shreya_Sonpavane_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="w-full text-center py-2.5 rounded-lg bg-softBlush text-midnight text-xs font-bold tracking-wide"
+                  className="w-full flex items-center justify-center gap-2 py-2.5 rounded-md bg-blue-600 hover:bg-blue-500 text-white text-xs font-mono font-medium tracking-wide transition-all shadow-sm"
                 >
-                  Get In Touch
+                  <Download className="w-4 h-4 text-blue-100" />
+                  <span>Download Resume (PDF)</span>
                 </a>
               </div>
             </div>
@@ -179,4 +186,3 @@ export const Navbar: React.FC = () => {
     </header>
   );
 };
-

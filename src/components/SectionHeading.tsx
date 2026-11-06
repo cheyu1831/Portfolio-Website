@@ -19,42 +19,41 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
   const isCenter = align === 'center';
 
   return (
-    <div className={`mb-12 sm:mb-16 ${isCenter ? 'text-center max-w-2xl mx-auto' : 'max-w-3xl'}`}>
+    <div className={`mb-16 sm:mb-20 ${isCenter ? 'text-center max-w-2xl mx-auto' : 'max-w-3xl'}`}>
       <motion.div
-        initial={{ opacity: 0, y: 15 }}
+        initial={{ opacity: 0, y: 12 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-50px' }}
-        transition={{ duration: 0.5 }}
-        className={`flex items-center gap-2.5 mb-3 ${isCenter ? 'justify-center' : ''}`}
+        transition={{ duration: 0.4 }}
+        className={`flex items-center gap-2.5 mb-3.5 ${isCenter ? 'justify-center' : ''}`}
       >
         {number && (
-          <span className="font-mono text-xs text-softBlush/70 font-semibold tracking-wider">
-            [{number}]
+          <span className="font-mono text-xs text-cyan-400 font-medium">
+            {number}
           </span>
         )}
-        <span className="font-mono text-xs uppercase tracking-widest text-softBlush font-medium">
-          {eyebrow}
+        <span className="font-mono text-xs uppercase tracking-wider text-cyan-400 font-medium">
+          // {eyebrow}
         </span>
-        <span className="w-6 h-[1px] bg-softBlush/40" />
       </motion.div>
 
       <motion.h2
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-50px' }}
-        transition={{ duration: 0.6, delay: 0.1 }}
-        className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-warmWhite font-sans"
+        transition={{ duration: 0.5, delay: 0.1 }}
+        className="text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-white font-mono"
       >
         {title}
       </motion.h2>
 
       {subtitle && (
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-4 text-warmWhite/70 text-base sm:text-lg leading-relaxed font-normal"
+          transition={{ duration: 0.5, delay: 0.15 }}
+          className="mt-3.5 text-slate-400 text-sm sm:text-base leading-relaxed font-normal"
         >
           {subtitle}
         </motion.p>
@@ -62,4 +61,3 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
     </div>
   );
 };
-

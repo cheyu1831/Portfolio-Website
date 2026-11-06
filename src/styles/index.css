@@ -3,43 +3,44 @@
 @tailwind utilities;
 
 :root {
-  --midnight: #0B0B14;
-  --deep-navy: #0D1426;
-  --muted-navy: #1B253E;
-  --soft-blush: #F5E6E9;
-  --warm-white: #F8F6F5;
+  --midnight: #080B11;
+  --deep-navy: #0E1626;
+  --muted-navy: #18233C;
+  --electric-blue: #3B82F6;
+  --cyan-accent: #06B6D4;
+  --warm-white: #F8FAFC;
 }
 
 html {
   scroll-behavior: smooth;
-  background-color: #0B0B14;
-  color: #F8F6F5;
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #080B11;
+  color: #F8FAFC;
+  font-family: 'JetBrains Mono', 'IBM Plex Mono', 'Fira Code', monospace;
+  letter-spacing: -0.01em;
 }
 
-/* Custom Scrollbar */
+/* Custom Minimal Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0B0B14;
+  background: #080B11;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1B253E;
-  border-radius: 4px;
-  border: 2px solid #0B0B14;
+  background: #18233C;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #364B78;
+  background: #3B82F6;
 }
 
 /* Selection */
 ::selection {
-  background-color: #F5E6E9;
-  color: #0B0B14;
+  background-color: #2563EB;
+  color: #FFFFFF;
 }
 
 /* Hero scratch canvas styling */
@@ -49,22 +50,31 @@ html {
   -webkit-user-select: none;
 }
 
-/* Subtle glow effects */
+/* Subtle clean borders */
 .subtle-border {
-  border: 1px solid rgba(245, 230, 233, 0.08);
+  border: 1px solid rgba(30, 45, 74, 0.7);
 }
 
 .subtle-border-hover:hover {
-  border-color: rgba(245, 230, 233, 0.22);
-}
-
-.editorial-title {
-  letter-spacing: -0.02em;
+  border-color: rgba(59, 130, 246, 0.4);
 }
 
 .tag-badge {
-  background: rgba(27, 37, 62, 0.5);
-  border: 1px solid rgba(245, 230, 233, 0.12);
-  color: #F8F6F5;
+  background: rgba(14, 22, 38, 0.7);
+  border: 1px solid rgba(30, 45, 74, 0.8);
+  color: #E2E8F0;
 }
 
+/* Accessibility: Respect Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

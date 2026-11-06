@@ -9,11 +9,11 @@ export const EXPERIENCES: ExperienceItem[] = [
     location: "Chennai, India",
     type: "Industry Internship",
     summary:
-      "Developed Python-based assessment and communication modules for an enterprise Learning Management System (LMS) using FastAPI.",
+      "Engineered backend microservices for an enterprise Learning Management System (LMS) using Python and FastAPI.",
     achievements: [
-      "Developed MCQ assessment modules with automated grading, response validation, and performance tracking.",
-      "Implemented trainer-trainee chat messaging modules to support communication and interaction within the LMS.",
-      "Built REST API endpoints using FastAPI and Pydantic for request validation and backend functionality."
+      "Built automated MCQ grading endpoints with strict Pydantic payload validation and score persistence.",
+      "Engineered real-time trainer-trainee chat messaging APIs to facilitate instructional collaboration.",
+      "Designed and documented RESTful endpoints in FastAPI, validated via Postman and automated test suites."
     ],
     technologies: [
       "Python",
@@ -32,19 +32,19 @@ export const EXPERIENCES: ExperienceItem[] = [
     location: "Chennai, India",
     type: "Industry Internship",
     summary:
-      "Developed a machine learning-based stock price prediction model using Python, applying data preprocessing and feature engineering techniques in a real-world development environment.",
+      "Engineered machine learning workflows for predictive financial modeling within an enterprise software lifecycle.",
     achievements: [
-      "Developed a machine learning-based stock price prediction model using Python.",
-      "Applied data preprocessing techniques to prepare data for model development.",
-      "Performed feature engineering to support stock price prediction."
+      "Developed a time-series stock price forecasting pipeline using Python, Scikit-learn, and historical market data.",
+      "Engineered feature extraction routines, moving averages, and volatility indices to optimize model convergence.",
+      "Implemented automated preprocessing pipelines for missing value imputation and outlier removal."
     ],
     technologies: [
       "Python",
       "Machine Learning",
-      "Data Preprocessing",
+      "Scikit-learn",
+      "Pandas",
       "Feature Engineering",
-      "Stock Price Prediction"
+      "Git"
     ]
   }
 ];
-

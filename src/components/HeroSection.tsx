@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDown, Sparkles, Terminal, Mail, ArrowUpRight } from 'lucide-react';
+import { ArrowDown, Sparkles, Mail, ArrowUpRight, Download } from 'lucide-react';
 import { HeroScratchCanvas } from './HeroScratchCanvas';
 
 export const HeroSection: React.FC = () => {
@@ -13,123 +13,133 @@ export const HeroSection: React.FC = () => {
         <HeroScratchCanvas onFirstScratch={() => setScratched(true)} />
       </div>
 
-      {/* Atmospheric Vignette & Gradients to guarantee editorial contrast */}
-      <div className="absolute inset-0 z-1 pointer-events-none bg-gradient-to-r from-midnight/95 via-midnight/65 to-transparent sm:w-3/4 md:w-3/5 lg:w-1/2" />
-      <div className="absolute inset-x-0 bottom-0 h-40 z-1 pointer-events-none bg-gradient-to-t from-midnight via-midnight/70 to-transparent" />
-      <div className="absolute inset-x-0 top-0 h-28 z-1 pointer-events-none bg-gradient-to-b from-midnight/80 to-transparent" />
+      {/* Atmospheric Vignette for readability */}
+      <div className="absolute inset-0 z-1 pointer-events-none bg-gradient-to-r from-midnight/95 via-midnight/70 to-transparent sm:w-3/4 md:w-3/5 lg:w-1/2" />
+      <div className="absolute inset-x-0 bottom-0 h-32 z-1 pointer-events-none bg-gradient-to-t from-midnight via-midnight/80 to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-24 z-1 pointer-events-none bg-gradient-to-b from-midnight/70 to-transparent" />
 
-      {/* Foreground UI Layer - pointer-events-none with pointer-events-auto for interactive items */}
-      <div className="absolute inset-0 z-10 pointer-events-none flex flex-col justify-between px-6 sm:px-12 md:px-16 lg:px-24 pt-28 pb-8 max-w-7xl mx-auto">
-        {/* Top Spacer / Interactive Scratch Indicator */}
-        {/* <div className="flex items-center justify-between">
+      {/* Foreground UI Layer */}
+      <div className="absolute inset-0 z-10 pointer-events-none flex flex-col justify-between px-6 sm:px-12 md:px-16 lg:px-24 pt-28 pb-10 max-w-7xl mx-auto">
+        {/* Top Minimal Scratch Hint */}
+        <div className="flex items-center">
           <motion.div
-            initial={{ opacity: 0, y: -10 }}
+            initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono tracking-wide transition-opacity duration-700 pointer-events-auto border border-softBlush/20 bg-deepNavy/80 backdrop-blur-md text-softBlush ${
-              scratched ? 'opacity-40 hover:opacity-100' : 'opacity-90 animate-pulse-subtle'
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className={`inline-flex items-center gap-2 px-3 py-1 rounded-md text-xs font-mono tracking-normal transition-opacity duration-300 pointer-events-auto border border-borderNavy bg-deepNavy/80 backdrop-blur-sm text-slate-300 ${
+              scratched ? 'opacity-30 hover:opacity-90' : 'opacity-85'
             }`}
           >
-            <Sparkles className="w-3.5 h-3.5 text-softBlush" />
-            <span>Interactive: Scratch or move cursor anywhere to reveal layer</span>
+            <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+            <span>Move cursor or scratch to interact</span>
           </motion.div>
-        </div> */}
+        </div>
 
-        {/* Hero Central Typography */}
+        {/* Hero Central Content */}
         <div className="max-w-2xl py-6 my-auto">
-          {/* Eyebrow */}
+          {/* Eyebrow / Role Badge */}
           <motion.div
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex items-center gap-3 mb-4"
+            transition={{ duration: 0.45, delay: 0.2 }}
+            className="flex items-center gap-2.5 mb-4"
           >
-            <span className="w-8 h-[1px] bg-softBlush/60" />
-            <span className="text-xs sm:text-sm font-mono uppercase tracking-widest text-softBlush/90 font-medium">
-              AI/ML Engineer & Python Developer
+            <span className="text-xs font-mono text-cyan-400 font-medium">
+              // AI/ML ENGINEER & PYTHON DEVELOPER
             </span>
           </motion.div>
 
-          {/* Name */}
+          {/* Primary Focal Point: Name */}
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-warmWhite mb-6 leading-[1.08] font-sans"
+            transition={{ duration: 0.55, delay: 0.3 }}
+            className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 leading-tight font-mono"
           >
             SHREYA <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-warmWhite via-softBlush to-softBlush/80">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-blue-200">
               SONPAVANE V K
             </span>
           </motion.h1>
 
-          {/* Statement */}
+          {/* Role Subtitle & Statement */}
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.55 }}
-            className="text-base sm:text-lg lg:text-xl text-warmWhite/80 font-normal leading-relaxed mb-8 max-w-xl"
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="text-base sm:text-lg text-slate-300 font-normal leading-relaxed mb-10 max-w-xl font-mono"
           >
             Building intelligent systems. Turning ideas into meaningful technology.
           </motion.p>
 
-          {/* Call to Actions */}
+          {/* Call to Actions with Smooth Animations */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.7 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
             className="flex flex-wrap items-center gap-4 pointer-events-auto"
           >
-            <a
+            <motion.a
               href="#projects"
-              className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-lg bg-softBlush text-midnight font-semibold text-sm tracking-wide shadow-glow-blush transition-all duration-300 hover:bg-white hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]"
+              whileHover={{ y: -1 }}
+              whileTap={{ scale: 0.98 }}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-blue-600 hover:bg-blue-500 text-white font-mono font-medium text-xs tracking-wide transition-colors shadow-sm"
             >
               <span>Explore My Work</span>
               <ArrowUpRight className="w-4 h-4" />
-            </a>
+            </motion.a>
 
-            <a
+            <motion.a
+              href="/shreya-resume.pdf"
+              download="Shreya_Sonpavane_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ y: -1 }}
+              whileTap={{ scale: 0.98 }}
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-md bg-deepNavy/80 hover:bg-mutedNavy text-slate-200 border border-borderNavy hover:border-blue-400/50 font-mono font-medium text-xs tracking-wide transition-colors backdrop-blur-sm"
+            >
+              <Download className="w-4 h-4 text-cyan-400" />
+              <span>Resume PDF</span>
+            </motion.a>
+
+            <motion.a
               href="#contact"
-              className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-lg bg-deepNavy/80 hover:bg-mutedNavy text-warmWhite border border-softBlush/20 font-medium text-sm tracking-wide transition-all duration-300 hover:border-softBlush/50 hover:scale-[1.02] active:scale-[0.98] backdrop-blur-md"
+              whileHover={{ y: -1 }}
+              whileTap={{ scale: 0.98 }}
+              className="inline-flex items-center gap-2 px-5 py-3 text-slate-300 hover:text-white border border-transparent hover:border-borderNavy rounded-md text-xs font-mono transition-colors"
             >
-              <Mail className="w-4 h-4 text-softBlush" />
+              <Mail className="w-4 h-4 text-blue-400" />
               <span>Get In Touch</span>
-            </a>
-
-            <a
-              href="#about"
-              className="inline-flex items-center gap-2 px-4 py-3.5 text-warmWhite/70 hover:text-warmWhite text-sm font-mono transition-colors"
-            >
-              <Terminal className="w-4 h-4 text-softBlush/70" />
-              <span>Read Bio</span>
-            </a>
+            </motion.a>
           </motion.div>
         </div>
 
-        {/* Bottom Bar: Scroll Indicator & Quick Facts */}
-        <div className="flex items-center justify-between pt-4 border-t border-softBlush/10">
+        {/* Bottom Bar: Clean Scroll Indicator & Minimal Status */}
+        <div className="flex items-center justify-between pt-6 border-t border-borderNavy/60">
           <motion.a
             href="#about"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.9 }}
-            className="inline-flex items-center gap-2 text-xs font-mono text-warmWhite/60 hover:text-softBlush transition-colors pointer-events-auto group"
+            transition={{ duration: 0.5, delay: 0.65 }}
+            className="inline-flex items-center gap-2 text-xs font-mono text-slate-400 hover:text-cyan-300 transition-colors pointer-events-auto group"
           >
-            <span className="w-2 h-2 rounded-full bg-softBlush/70 group-hover:scale-125 transition-transform" />
+            <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 group-hover:scale-125 transition-transform" />
             <span>Scroll to explore</span>
-            <ArrowDown className="w-3.5 h-3.5 animate-bounce text-softBlush/80" />
+            <ArrowDown className="w-3.5 h-3.5 text-cyan-400/80 group-hover:translate-y-0.5 transition-transform" />
           </motion.a>
 
-          <div className="hidden md:flex items-center gap-6 text-xs font-mono text-warmWhite/50">
-            <span>Chennai, India</span>
+          <div className="hidden md:flex items-center gap-4 text-xs font-mono text-slate-500">
+            <span>Chennai, IN</span>
             <span>•</span>
-            <span>FastAPI & Federated Learning</span>
+            <span>FastAPI & Python</span>
             <span>•</span>
-            <span className="text-softBlush/80">Available for Opportunities</span>
+            <span className="text-cyan-400 flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
+              Open to Opportunities
+            </span>
           </div>
         </div>
       </div>
     </section>
   );
 };
-

@@ -3,43 +3,34 @@ import { AchievementItem } from '../types/portfolio';
 export const ACHIEVEMENTS: AchievementItem[] = [
   {
     title: "Secretary — DevDynasty Technical Club",
-    roleOrContext: "Department Leadership & Student Governance",
+    roleOrContext: "Leadership & Student Governance",
     description:
-      "Elected Secretary of DevDynasty Technical Club. Led club initiatives, coordinated inter-college technical hackathons, conducted developer workshops, and mentored peers in modern programming technologies.",
+      "Coordinated college-wide hackathons, hands-on programming bootcamps, and developer workshops, mentoring junior engineering students in full-stack workflows.",
     type: "Leadership",
-    impact: "Led technical activities, organized coding challenges, and fostered an active engineering culture on campus."
+    impact: "Organized technical symposiums and developer workshops for 200+ students."
   },
   {
-    title: "Hackathon Participation & Rapid Prototyping",
-    roleOrContext: "Competitive Hackathon Events",
+    title: "ECube Paper Presentation Award",
+    roleOrContext: "State-Level Technical Symposium",
     description:
-      "Active participant in multi-hour hackathons, collaborating in cross-functional teams to engineer functional minimum viable products (MVPs) addressing real-world problem statements under strict time constraints.",
-    type: "Hackathon",
-    impact: "Demonstrated rapid problem-solving, real-time debugging, and agile collaborative software delivery."
-  },
-  {
-    title: "Technical Paper Presentation",
-    roleOrContext: "Academic Symposium & Research Forums",
-    description:
-      "Presented technical papers on emerging paradigms in intelligent systems, privacy preservation, and computing architectures before academic and industry evaluation panels.",
+      "Awarded 4th Prize for research paper and seminar on Brain–Computer Interface (BCI) architectures, neural signal decoding, and human-computer integration.",
     type: "Research",
-    impact: "Synthesized complex theoretical principles into clear architectural diagrams and structured research presentations."
+    impact: "Recognized among inter-college entries for technical depth and clarity."
   },
   {
-    title: "Industry Internship Experience",
-    roleOrContext: "Hexaware Technologies & Intelizign Lifecycle Services",
+    title: "Hackathon Rapid Prototyping",
+    roleOrContext: "Competitive Hackathons",
     description:
-      "Selected for specialized industry internships, engineering production-grade FastAPI microservices, LMS modules, and contributing to enterprise software lifecycle pipelines.",
-    type: "Engineering",
-    impact: "Bridged academic computer science theory with enterprise-grade backend development standards."
+      "Collaborated in fast-paced engineering teams to architect functional MVPs addressing assistive technologies and automated data processing under strict timeframes.",
+    type: "Hackathon",
+    impact: "Delivered end-to-end working prototypes under 24-hour constraints."
   },
   {
-    title: "Full-Stack & Intelligent Project Engineering",
-    roleOrContext: "Applied AI & Distributed Systems",
+    title: "Academic Excellence",
+    roleOrContext: "B.Tech Information Technology",
     description:
-      "Engineered comprehensive technical solutions spanning privacy-preserving federated fraud detection (FedShield), multimodal agricultural vision (Leafy), and localized Text-to-SQL compilers (QueryShield).",
+      "Maintained an 8.85 / 10.0 CGPA across rigorous coursework in Data Structures, Machine Learning, Operating Systems, and Distributed Computing.",
     type: "Engineering",
-    impact: "Architected end-to-end applications solving concrete problems across privacy, agriculture, and database access."
+    impact: "Consistently ranked in the top tier of the Information Technology department."
   }
 ];
-

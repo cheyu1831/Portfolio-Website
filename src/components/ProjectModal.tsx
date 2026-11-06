@@ -20,47 +20,48 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
-          className="fixed inset-0 bg-midnight/90 backdrop-blur-md"
+          className="fixed inset-0 bg-midnight/90 backdrop-blur-sm"
         />
 
         {/* Modal Window */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95, y: 20 }}
+          initial={{ opacity: 0, scale: 0.96, y: 16 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.95, y: 20 }}
-          transition={{ duration: 0.3 }}
-          className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl bg-deepNavy border border-softBlush/20 p-6 sm:p-8 shadow-2xl z-10 text-warmWhite"
+          exit={{ opacity: 0, scale: 0.96, y: 16 }}
+          transition={{ duration: 0.25 }}
+          className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-xl bg-deepNavy border border-borderNavy p-6 sm:p-8 shadow-2xl z-10 text-slate-200 font-mono"
         >
           {/* Close Button */}
           <button
             onClick={onClose}
-            className="absolute top-5 right-5 p-2 rounded-lg bg-mutedNavy/60 hover:bg-mutedNavy text-warmWhite/70 hover:text-warmWhite border border-softBlush/10 transition-colors"
+            aria-label="Close dialog"
+            className="absolute top-5 right-5 p-2 rounded-md bg-midnight hover:bg-mutedNavy text-slate-400 hover:text-white border border-borderNavy transition-colors"
           >
-            <X className="w-5 h-5" />
+            <X className="w-4 h-4" />
           </button>
 
           {/* Header */}
           <div className="pr-10">
-            <span className="inline-block px-3 py-1 rounded-full text-[11px] font-mono uppercase tracking-wider bg-mutedNavy border border-softBlush/20 text-softBlush mb-3">
+            <span className="inline-block px-2.5 py-0.5 rounded text-[11px] font-mono uppercase tracking-wider bg-midnight border border-blue-500/30 text-cyan-400 mb-2.5">
               {project.category}
             </span>
-            <h3 className="text-2xl sm:text-3xl font-bold font-sans tracking-tight text-warmWhite">
+            <h3 className="text-xl sm:text-2xl font-bold font-mono tracking-tight text-white">
               {project.title}
             </h3>
-            <p className="text-sm font-mono text-softBlush/80 mt-1">
+            <p className="text-xs sm:text-sm font-mono text-slate-400 mt-1">
               {project.tagline}
             </p>
           </div>
 
           {/* Metrics Row */}
           {project.metrics && project.metrics.length > 0 && (
-            <div className="grid grid-cols-3 gap-3 my-6 py-4 px-4 rounded-xl bg-midnight/60 border border-softBlush/10">
+            <div className="grid grid-cols-3 gap-3 my-6 py-3.5 px-4 rounded-lg bg-midnight border border-borderNavy">
               {project.metrics.map((m, i) => (
                 <div key={i} className="text-center sm:text-left">
-                  <div className="text-[10px] font-mono uppercase text-warmWhite/50">
+                  <div className="text-[10px] font-mono uppercase text-slate-500">
                     {m.label}
                   </div>
-                  <div className="text-xs sm:text-sm font-semibold font-mono text-softBlush mt-0.5">
+                  <div className="text-xs sm:text-sm font-semibold font-mono text-cyan-300 mt-0.5">
                     {m.value}
                   </div>
                 </div>
@@ -69,38 +70,38 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           )}
 
           {/* Problem & Solution Breakdown */}
-          <div className="space-y-5 my-6 text-sm leading-relaxed text-warmWhite/85">
+          <div className="space-y-4 my-6 text-xs sm:text-sm leading-relaxed text-slate-300">
             {project.problemStatement && (
-              <div className="p-4 rounded-xl bg-midnight/40 border border-red-500/10">
-                <h4 className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-rose-300 font-semibold mb-2">
-                  <AlertCircle className="w-4 h-4" /> The Challenge / Problem Statement
+              <div className="p-4 rounded-lg bg-midnight/70 border border-borderNavy">
+                <h4 className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-cyan-400 font-semibold mb-2">
+                  <AlertCircle className="w-3.5 h-3.5" /> Problem Context
                 </h4>
-                <p className="text-xs sm:text-sm text-warmWhite/80">
+                <p className="text-xs text-slate-300 leading-relaxed font-mono">
                   {project.problemStatement}
                 </p>
               </div>
             )}
 
             {project.solutionOverview && (
-              <div className="p-4 rounded-xl bg-midnight/40 border border-emerald-500/10">
-                <h4 className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-emerald-300 font-semibold mb-2">
-                  <Cpu className="w-4 h-4" /> Architectural Solution
+              <div className="p-4 rounded-lg bg-midnight/70 border border-borderNavy">
+                <h4 className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-blue-400 font-semibold mb-2">
+                  <Cpu className="w-3.5 h-3.5" /> Architectural Solution
                 </h4>
-                <p className="text-xs sm:text-sm text-warmWhite/80">
+                <p className="text-xs text-slate-300 leading-relaxed font-mono">
                   {project.solutionOverview}
                 </p>
               </div>
             )}
 
             {/* Key Features */}
-            <div>
-              <h4 className="font-mono text-xs uppercase tracking-wider text-softBlush font-semibold mb-3 flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4" /> Key Capabilities & Implementation Details
+            <div className="pt-2">
+              <h4 className="font-mono text-xs uppercase tracking-wider text-slate-300 font-semibold mb-3 flex items-center gap-2">
+                <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400" /> Key Implementation Details
               </h4>
               <ul className="space-y-2">
                 {project.keyFeatures.map((feat, i) => (
-                  <li key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-warmWhite/80">
-                    <span className="w-1.5 h-1.5 rounded-full bg-softBlush mt-1.5 shrink-0" />
+                  <li key={i} className="flex items-start gap-2.5 text-xs text-slate-300">
+                    <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-1.5 shrink-0" />
                     <span>{feat}</span>
                   </li>
                 ))}
@@ -110,14 +111,14 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             {/* Architecture Highlights */}
             {project.architectureHighlights && project.architectureHighlights.length > 0 && (
               <div className="pt-2">
-                <h4 className="font-mono text-xs uppercase tracking-wider text-softBlush font-semibold mb-3 flex items-center gap-2">
-                  <Layers className="w-4 h-4" /> System & Model Components
+                <h4 className="font-mono text-xs uppercase tracking-wider text-slate-300 font-semibold mb-3 flex items-center gap-2">
+                  <Layers className="w-3.5 h-3.5 text-blue-400" /> System Architecture Spec
                 </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {project.architectureHighlights.map((arch, i) => (
                     <div
                       key={i}
-                      className="p-2.5 rounded-lg bg-midnight/50 border border-softBlush/10 text-xs font-mono text-warmWhite/80"
+                      className="p-2.5 rounded bg-midnight border border-borderNavy text-xs font-mono text-slate-300"
                     >
                       {arch}
                     </div>
@@ -128,14 +129,14 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
             {/* Technologies */}
             <div className="pt-2">
-              <h4 className="font-mono text-xs uppercase tracking-wider text-warmWhite/60 mb-2">
-                Technology Stack
+              <h4 className="font-mono text-xs uppercase tracking-wider text-slate-400 mb-2">
+                Technologies
               </h4>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-1.5">
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="px-2.5 py-1 rounded bg-mutedNavy/80 border border-softBlush/15 text-xs font-mono text-warmWhite"
+                    className="px-2.5 py-1 rounded bg-midnight border border-borderNavy text-xs font-mono text-slate-300"
                   >
                     {tech}
                   </span>
@@ -145,22 +146,18 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           </div>
 
           {/* Action Links */}
-          <div className="pt-6 border-t border-softBlush/10 flex flex-wrap items-center justify-between gap-4">
+          <div className="pt-5 border-t border-borderNavy flex flex-wrap items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              {project.repoUrl ? (
+              {project.repoUrl && (
                 <a
                   href={project.repoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-mutedNavy hover:bg-mutedNavy/80 border border-softBlush/20 text-xs font-mono text-warmWhite hover:text-softBlush transition-colors"
+                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-md bg-midnight hover:bg-mutedNavy border border-borderNavy text-xs font-mono text-slate-300 hover:text-white transition-colors"
                 >
-                  <Github className="w-4 h-4" />
+                  <Github className="w-3.5 h-3.5 text-cyan-400" />
                   <span>GitHub Repository</span>
                 </a>
-              ) : (
-                <span className="text-xs font-mono text-warmWhite/40 italic">
-                  Repository access upon request
-                </span>
               )}
 
               {project.demoUrl && (
@@ -168,9 +165,9 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                   href={project.demoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-softBlush text-midnight text-xs font-semibold hover:bg-white transition-colors"
+                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-md bg-blue-600 text-white text-xs font-mono font-medium hover:bg-blue-500 transition-colors"
                 >
-                  <span>Live Deployment</span>
+                  <span>Live Demo</span>
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               )}
@@ -178,9 +175,9 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
             <button
               onClick={onClose}
-              className="px-4 py-2 rounded-lg text-xs font-mono text-warmWhite/60 hover:text-warmWhite"
+              className="px-3 py-1.5 rounded-md text-xs font-mono text-slate-400 hover:text-white transition-colors"
             >
-              Close Window [Esc]
+              [Close Esc]
             </button>
           </div>
         </motion.div>
