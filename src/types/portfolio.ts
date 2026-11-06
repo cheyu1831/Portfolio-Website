@@ -11,6 +11,8 @@ export interface Project {
   metrics?: { label: string; value: string }[];
   repoUrl?: string;
   demoUrl?: string;
+  videoDemoUrl?: string;
+  websiteUrl?: string;
   featured: boolean;
   architectureHighlights?: string[];
 }
@@ -46,11 +48,35 @@ export interface EducationItem {
   highlights: string[];
 }
 
-export interface AchievementItem {
+interface AchievementBase {
   title: string;
-  roleOrContext: string;
+  date: string;
   description: string;
-  type: 'Leadership' | 'Hackathon' | 'Research' | 'Engineering';
-  impact: string;
+  link: string;
 }
 
+export interface CodingCompetitionAchievement extends AchievementBase {
+  category: 'coding';
+  issuer: string;
+}
+
+export interface HackathonAchievement extends AchievementBase {
+  category: 'hackathons';
+  position: string;
+}
+
+export interface PaperAchievement extends AchievementBase {
+  category: 'papers';
+  venue: string;
+}
+
+export type AchievementItem =
+  | CodingCompetitionAchievement
+  | HackathonAchievement
+  | PaperAchievement;
+
+export interface AchievementCategory {
+  id: AchievementItem['category'];
+  label: string;
+  entries: AchievementItem[];
+}

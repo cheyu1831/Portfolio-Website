@@ -1,36 +1,110 @@
-import { AchievementItem } from '../types/portfolio';
+import { AchievementCategory } from '../types/portfolio';
 
-export const ACHIEVEMENTS: AchievementItem[] = [
+export const ACHIEVEMENTS: AchievementCategory[] = [
   {
-    title: "Secretary — DevDynasty Technical Club",
-    roleOrContext: "Leadership & Student Governance",
-    description:
-      "Coordinated college-wide hackathons, hands-on programming bootcamps, and developer workshops, mentoring junior engineering students in full-stack workflows.",
-    type: "Leadership",
-    impact: "Organized technical symposiums and developer workshops for 200+ students."
+    id: 'coding',
+    label: 'Coding Competitions',
+    entries: [
+      {
+        category: 'coding',
+        title: 'Altruisty Coding Challenge',
+        issuer: 'Altruisty Pvt. Ltd.',
+        date: 'December 2024',
+        description: 'Competed against 500+ participants in algorithmic problem solving.',
+        link: 'https://www.linkedin.com/posts/shreya-sonpavane-2b2b152a1_altruistyinnovation-codingchallenge-problemsolving-activity-7327224035715571712-JdAa',
+      },
+      {
+        category: 'coding',
+        title: "Coding Quest, Samhita'25",
+        issuer: 'MIT Chromepet',
+        date: 'April 2025',
+        description: 'Competed against 250+ participants in critical thinking and algorithmic problem solving.',
+        link: 'https://drive.google.com/file/d/1341XWmTgz8ctW3gTg4yKMkKl-NU-KkDa/view?usp=sharing',
+      },
+    ],
   },
   {
-    title: "ECube Paper Presentation Award",
-    roleOrContext: "State-Level Technical Symposium",
-    description:
-      "Awarded 4th Prize for research paper and seminar on Brain–Computer Interface (BCI) architectures, neural signal decoding, and human-computer integration.",
-    type: "Research",
-    impact: "Recognized among inter-college entries for technical depth and clarity."
+    id: 'hackathons',
+    label: 'Hackathons & Tech Events',
+    entries: [
+      {
+        category: 'hackathons',
+        title: 'VIT Hack-A-Cure',
+        position: 'Finalist',
+        date: 'October 2026',
+        description: 'Built an AI-powered medical chatbot using Retrieval-Augmented Generation (RAG) and vector database techniques for accurate and context-aware medical query responses.',
+        link: 'https://drive.google.com/file/d/1it4rHBfkjiTVyPy5QOUbUP3KgGGkwsgV/view?usp=sharing',
+      },
+      {
+        category: 'hackathons',
+        title: "Hackintym'25 2.0 - Meenakshi Sundararajan Engineering College",
+        position: 'Finalist',
+        date: 'September 2025',
+        description: 'Built an AI-powered customer support automation system enabling intelligent complaint categorization, prioritization, and automated responses.',
+        link: 'https://resolve-x.netlify.app/',
+      },
+      {
+        category: 'hackathons',
+        title: 'Agentic AI Day Hackathon - Google Cloud & H2Skills',
+        position: 'Participant',
+        date: 'July 2025',
+        description: 'Participated in the Agentic AI Day Hackathon conducted by Google Cloud and H2Skills, collaborating on AI-driven solutions and exploring agentic AI concepts through innovation and teamwork.',
+        link: 'https://drive.google.com/file/d/1v4u1EgYefKT3HDEiMEOz1R2XXlga7TQE/view?usp=sharing',
+      },
+      {
+        category: 'hackathons',
+        title: "Hackintym'25 - Meenakshi Sundararajan Engineering College",
+        position: 'Participant',
+        date: 'April 2025',
+        description: 'Built an AI-powered resume analyzer that evaluates resumes, provides intelligent feedback, and enhances candidate profile assessment using machine learning techniques.',
+        link: 'https://drive.google.com/file/d/1pLguoQC--cCV9DxtJKRGgd1MCvDX1LSu/view?usp=sharing',
+      },
+      {
+        category: 'hackathons',
+        title: "Smartathon'25 - St.Joseph's College of Engineering",
+        position: 'Participant',
+        date: 'February 2025',
+        description: 'Created a self-learning website using HTML, CSS, and JS where students can learn independently and connect via study groups.',
+        link: 'https://www.linkedin.com/posts/shreya-sonpavane-2b2b152a1_smartathon-innovation-collaboration-activity-7327239282773884929-D7Xn',
+      },
+      {
+        category: 'hackathons',
+        title: "Course Sharing Platform - IEEE Buildathon'25, SSN College of Engineering",
+        position: 'Participant',
+        date: 'February 2025',
+        description: 'Collaborated with diverse participants to build and present a functional MVP for a course sharing platform, focusing on teamwork, communication, and innovative problem-solving.',
+        link: 'https://drive.google.com/file/d/1tHpULnc5_PSCKQ5BkzbzUtI62Tl_z21R/view?usp=sharing',
+      },
+    ],
   },
   {
-    title: "Hackathon Rapid Prototyping",
-    roleOrContext: "Competitive Hackathons",
-    description:
-      "Collaborated in fast-paced engineering teams to architect functional MVPs addressing assistive technologies and automated data processing under strict timeframes.",
-    type: "Hackathon",
-    impact: "Delivered end-to-end working prototypes under 24-hour constraints."
+    id: 'papers',
+    label: 'Papers & Talks',
+    entries: [
+      {
+        category: 'papers',
+        title: 'AI-Based Intrusion Detection System for Multiplayer Cheat Detection',
+        venue: 'HICET International Conference',
+        date: 'February 2026',
+        description: 'Presented a research paper on an AI-based intrusion detection system for multiplayer cheat detection, achieving 93% accuracy with 1.5–2s latency using hybrid machine learning models.',
+        link: 'https://drive.google.com/file/d/1nIDuED9-Cv5GlBT6T3OOEZXgHTu7yW3g/view?usp=sharing',
+      },
+      {
+        category: 'papers',
+        title: 'Optimising Marketing Strategies: Predicting Customer Personality Using Advanced Machine Learning Models',
+        venue: "Xplore'25, Loyola-ICAM College of Engineering and Technology",
+        date: 'September 2025',
+        description: 'Presented a research paper at the Diamond Docs event on predicting customer personality using advanced machine learning models.',
+        link: 'https://drive.google.com/file/d/1YefsdPWnQ0gR4d2Ed0peDihkiBqbhSM8/view?usp=sharing',
+      },
+      {
+        category: 'papers',
+        title: 'Seminar on Brain Computer Interface',
+        venue: 'E-Cube Event - Meenakshi Sundararajan Engineering College',
+        date: 'September 2024',
+        description: 'Delivered a seminar on Brain–Computer Interface (BCI) technology and secured 4th place for technical presentation excellence.',
+        link: 'https://drive.google.com/file/d/1frYq4U0ag2Y04H28Zab76mKHS1em-W_j/view?usp=sharing',
+      },
+    ],
   },
-  {
-    title: "Academic Excellence",
-    roleOrContext: "B.Tech Information Technology",
-    description:
-      "Maintained an 8.85 / 10.0 CGPA across rigorous coursework in Data Structures, Machine Learning, Operating Systems, and Distributed Computing.",
-    type: "Engineering",
-    impact: "Consistently ranked in the top tier of the Information Technology department."
-  }
 ];

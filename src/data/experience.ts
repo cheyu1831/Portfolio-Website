@@ -1,3 +1,4 @@
+
 import { ExperienceItem } from '../types/portfolio';
 
 export const EXPERIENCES: ExperienceItem[] = [
@@ -9,19 +10,14 @@ export const EXPERIENCES: ExperienceItem[] = [
     location: "Chennai, India",
     type: "Industry Internship",
     summary:
-      "Engineered backend microservices for an enterprise Learning Management System (LMS) using Python and FastAPI.",
+      "Developed backend modules for an enterprise Learning Management System using Python and FastAPI.",
     achievements: [
-      "Built automated MCQ grading endpoints with strict Pydantic payload validation and score persistence.",
-      "Engineered real-time trainer-trainee chat messaging APIs to facilitate instructional collaboration.",
-      "Designed and documented RESTful endpoints in FastAPI, validated via Postman and automated test suites."
+      "Developed MCQ modules with automated grading and score management.",
+      "Built chat messaging APIs for trainer-trainee interactions.",
+      "Implemented and tested REST APIs using FastAPI and Postman."
     ],
     technologies: [
-      "Python",
-      "FastAPI",
-      "REST APIs",
-      "Pydantic",
-      "Postman",
-      "Git"
+      "Python", "FastAPI", "REST APIs", "Pydantic", "Postman", "Git"
     ]
   },
   {
@@ -32,19 +28,32 @@ export const EXPERIENCES: ExperienceItem[] = [
     location: "Chennai, India",
     type: "Industry Internship",
     summary:
-      "Engineered machine learning workflows for predictive financial modeling within an enterprise software lifecycle.",
+      "Developed machine learning workflows for financial time-series forecasting.",
     achievements: [
-      "Developed a time-series stock price forecasting pipeline using Python, Scikit-learn, and historical market data.",
-      "Engineered feature extraction routines, moving averages, and volatility indices to optimize model convergence.",
-      "Implemented automated preprocessing pipelines for missing value imputation and outlier removal."
+      "Built stock price prediction models using Python and Scikit-learn.",
+      "Performed feature engineering using moving averages and volatility indicators.",
+      "Implemented data preprocessing and outlier handling pipelines."
     ],
     technologies: [
-      "Python",
-      "Machine Learning",
-      "Scikit-learn",
-      "Pandas",
-      "Feature Engineering",
-      "Git"
+      "Python", "Machine Learning", "Scikit-learn", "Pandas", "Git"
+    ]
+  },
+  {
+    id: "devdynasty",
+    role: "Secretary",
+    company: "DevDynasty Club",
+    period: "Aug 2025 – Aug 2026",
+    location: "Chennai, India",
+    type: "Leadership Experience",
+    summary:
+      "Led club operations and supported technical community initiatives.",
+    achievements: [
+      "Organized 3+ technical events promoting innovation and collaboration.",
+      "Coordinated club activities and facilitated team communication.",
+      "Managed event planning and student engagement."
+    ],
+    technologies: [
+      "Leadership", "Event Management", "Team Collaboration", "Communication"
     ]
   }
 ];

@@ -8,7 +8,7 @@ export const EDUCATION: EducationItem[] = [
     location: "Chennai, India",
     year: "2023 – 2027",
     highlights: [
-      "Specialized in Deep Learning, Natural Language Processing, and Computer Vision, with a focus on practical applications.",
+      // "Specialized in Deep Learning, Natural Language Processing, and Computer Vision, with a focus on practical applications.",
       "CGPA: 8.85/10.0.",
       "Awarded 4th Prize at the ECube Paper Presentation Event for presenting a seminar on Brain–Computer Interface.",
       "Served as Secretary of the DevDynasty Web Development & E-Sports Club.",

@@ -27,9 +27,10 @@ export const PROJECTS: Project[] = [
     ],
     technologies: [
       "Python",
+      "Flask",
       "Flower (flwr)",
-      "TensorFlow",
-      "Keras",
+      "PyTorch",
+      "Opacus",
       "Differential Privacy",
       "SMOTE",
       "Scikit-learn",
@@ -40,8 +41,10 @@ export const PROJECTS: Project[] = [
       { label: "Imbalance", value: "SMOTE Tuned" },
       { label: "Consensus", value: "FedAvg Strategy" }
     ],
-    repoUrl: "https://github.com/",
-    demoUrl: undefined
+    repoUrl: "https://github.com/CodebyDeshma-27/FedShield",
+    demoUrl: undefined,
+    // videoDemoUrl: "https://example.com/video-demo",
+    // websiteUrl: "https://example.com/project-website"
   },
   {
     id: "leafy",
@@ -70,7 +73,7 @@ export const PROJECTS: Project[] = [
     technologies: [
       "Python",
       "FastAPI",
-      "Gemini API",
+      "Groq API",
       "React",
       "Tailwind CSS",
       "Pydantic",
@@ -81,8 +84,10 @@ export const PROJECTS: Project[] = [
       { label: "Modality", value: "Multimodal Vision" },
       { label: "Guidance", value: "Curative + Organic" }
     ],
-    repoUrl: "https://github.com/",
-    demoUrl: undefined
+    repoUrl: "https://github.com/Shreya-1831/Leafy-Chatbot",
+    demoUrl: undefined,
+    // videoDemoUrl: "https://example.com/video-demo",
+    websiteUrl: "https://leafy-chatbot.vercel.app"
   },
   {
     id: "smart-learning",
@@ -116,8 +121,7 @@ export const PROJECTS: Project[] = [
       "React",
       "Node.js",
       "Express.js",
-      "Gemini API",
-      "TypeScript"
+      "Gemini API"
     ],
     metrics: [
       { label: "Learning Tools", value: "5 AI Modules" },
@@ -125,7 +129,9 @@ export const PROJECTS: Project[] = [
       { label: "Stack", value: "Python + React + Node" }
     ],
     repoUrl: "https://github.com/Shreya-1831/Smart_Learning",
-    demoUrl: undefined
+    demoUrl: undefined,
+    // videoDemoUrl: "https://example.com/video-demo",
+    websiteUrl: "https://the-smart-learning-platform.vercel.app"
   },
   {
     id: "mil-evid",
@@ -168,8 +174,10 @@ export const PROJECTS: Project[] = [
       { label: "Reranking", value: "Cross-Encoder + RRF" },
       { label: "Verification", value: "NLI Claim-Level" }
     ],
-    repoUrl: "https://github.com/",
-    demoUrl: undefined
+    repoUrl: "https://github.com/Shreya-1831/MIL-EVID",
+    demoUrl: undefined,
+    videoDemoUrl: "https://drive.google.com/file/d/1Qe3fnedcSLEuKSyOIkfCVdp-wTAzuWc_/view?usp=sharing",
+    websiteUrl: "https://mil-evid.vercel.app"
   },
   {
     id: "queryshield",
@@ -196,8 +204,8 @@ export const PROJECTS: Project[] = [
     ],
     technologies: [
       "Python",
-      "Local LLMs",
-      "SQL",
+      "Ollama",
+      "SQLGlot",
       "FastAPI",
       "MySQL",
       "PyTorch",
@@ -206,9 +214,11 @@ export const PROJECTS: Project[] = [
     metrics: [
       { label: "Privacy", value: "100% Offline" },
       { label: "Safety", value: "AST Sanitized" },
-      { label: "Database", value: "MySQL / SQLite" }
+      { label: "Database", value: "MySQL " }
     ],
-    repoUrl: "https://github.com/",
-    demoUrl: undefined
+    repoUrl: "https://github.com/Shreya-1831/QueryShield",
+    demoUrl: undefined,
+    // videoDemoUrl: "https://example.com/video-demo",
+    // websiteUrl: "https://example.com/project-website"
   }
 ];

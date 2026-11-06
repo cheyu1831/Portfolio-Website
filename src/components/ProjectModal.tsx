@@ -1,7 +1,20 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ExternalLink, Github, Cpu, CheckCircle2, Layers, AlertCircle } from 'lucide-react';
+import {
+  X,
+  ExternalLink,
+  Github,
+  Cpu,
+  CheckCircle2,
+  Layers,
+  AlertCircle,
+  Play,
+  Globe2,
+} from 'lucide-react';
 import { Project } from '../types/portfolio';
+
+const DEFAULT_VIDEO_DEMO_URL = 'https://example.com/video-demo';
+const DEFAULT_WEBSITE_URL = 'https://example.com/project-website';
 
 interface ProjectModalProps {
   project: Project | null;
@@ -159,6 +172,26 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                   <span>GitHub Repository</span>
                 </a>
               )}
+
+              <a
+                href={project.videoDemoUrl || DEFAULT_VIDEO_DEMO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-md bg-midnight hover:bg-mutedNavy border border-borderNavy text-xs font-mono text-slate-300 hover:text-white transition-colors"
+              >
+                <Play className="w-3.5 h-3.5 text-cyan-400" />
+                <span>Video Demo</span>
+              </a>
+
+              <a
+                href={project.websiteUrl || DEFAULT_WEBSITE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-md bg-midnight hover:bg-mutedNavy border border-borderNavy text-xs font-mono text-slate-300 hover:text-white transition-colors"
+              >
+                <Globe2 className="w-3.5 h-3.5 text-cyan-400" />
+                <span>Website</span>
+              </a>
 
               {project.demoUrl && (
                 <a

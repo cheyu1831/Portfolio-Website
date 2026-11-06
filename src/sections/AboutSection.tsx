@@ -12,7 +12,7 @@ export const AboutSection: React.FC = () => {
           number="01"
           eyebrow="Profile & Background"
           title="Engineering Practical Intelligent Systems"
-          subtitle="Experienced in backend architecture, privacy-preserving machine learning, and full-stack software development."
+          subtitle="Experienced in backend architecture, federated learning, and full-stack software development."
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
@@ -26,11 +26,11 @@ export const AboutSection: React.FC = () => {
               className="text-sm sm:text-base text-slate-300 leading-relaxed space-y-4 font-mono"
             >
               <p>
-                I am a <span className="text-cyan-400 font-medium">Python Developer and aspiring AI/ML Engineer</span> focused on building intelligent applications and scalable backend systems. My experience spans developing backend services using <span className="text-white font-medium">FastAPI</span> at Hexaware Technologies, training machine learning models, and exploring privacy-preserving AI with <span className="text-white font-medium">Federated Learning</span>.
+                I am a <span className="text-cyan-400 font-medium">Python Developer and aspiring AI/ML Engineer</span> focused on building intelligent applications and scalable backend systems. 
               </p>
 
               <p>
-                I focus on solving concrete engineering challenges: designing robust asynchronous REST APIs, structuring relational databases, experimenting with neural networks, and developing evidence-grounded <span className="text-white font-medium">Generative AI</span> workflows.
+                I enjoy transforming complex data into intelligent systems through thoughtful model design, experimentation, and continuous learning.
               </p>
 
               <p className="text-slate-400">
@@ -43,10 +43,10 @@ export const AboutSection: React.FC = () => {
               <div className="p-6 rounded-xl bg-deepNavy/80 border border-borderNavy hover:border-blue-500/30 transition-all">
                 <div className="flex items-center gap-2.5 mb-2.5">
                   <Shield className="w-4 h-4 text-cyan-400" />
-                  <h4 className="font-semibold text-sm text-white font-mono">Privacy-Preserving AI</h4>
+                  <h4 className="font-semibold text-sm text-white font-mono">Machine Learning</h4>
                 </div>
                 <p className="text-xs text-slate-400 leading-relaxed font-mono">
-                  Decentralized model training via Federated Learning (Flower) and Differential Privacy guarantees.
+                  Expertise in developing and deploying ML models for real-world applications
                 </p>
               </div>
 
@@ -56,27 +56,27 @@ export const AboutSection: React.FC = () => {
                   <h4 className="font-semibold text-sm text-white font-mono">Backend Architecture</h4>
                 </div>
                 <p className="text-xs text-slate-400 leading-relaxed font-mono">
-                  Asynchronous REST microservices with FastAPI, Pydantic type safety, and relational database schemas.
+                  Developed backend APIs using Python and FastAPI, with Pydantic validation and database integration.
                 </p>
               </div>
 
               <div className="p-6 rounded-xl bg-deepNavy/80 border border-borderNavy hover:border-blue-500/30 transition-all">
                 <div className="flex items-center gap-2.5 mb-2.5">
                   <Network className="w-4 h-4 text-cyan-400" />
-                  <h4 className="font-semibold text-sm text-white font-mono">Applied Machine Learning</h4>
+                  <h4 className="font-semibold text-sm text-white font-mono">Deep Learning</h4>
                 </div>
                 <p className="text-xs text-slate-400 leading-relaxed font-mono">
-                  End-to-end pipelines using PyTorch, TensorFlow, Scikit-learn, Computer Vision, and RAG architectures.
+                  Proficient in neural networks, CNNs, RNNs, and transformer architectures
                 </p>
               </div>
 
               <div className="p-6 rounded-xl bg-deepNavy/80 border border-borderNavy hover:border-blue-500/30 transition-all">
                 <div className="flex items-center gap-2.5 mb-2.5">
                   <Sparkles className="w-4 h-4 text-blue-400" />
-                  <h4 className="font-semibold text-sm text-white font-mono">Technical Leadership</h4>
+                  <h4 className="font-semibold text-sm text-white font-mono">AI Innovation</h4>
                 </div>
                 <p className="text-xs text-slate-400 leading-relaxed font-mono">
-                  Secretary of DevDynasty Technical Club, active hackathon prototyping, and research paper presentations.
+                  Passionate about exploring cutting-edge AI technologies and research
                 </p>
               </div>
             </div>
@@ -139,7 +139,7 @@ export const AboutSection: React.FC = () => {
                   <div className="pt-2">
                     <span className="text-slate-300">focus</span> ={' '}
                     <span className="text-slate-200">
-                      "Building privacy-first AI & resilient cloud microservices."
+                      "Building federated AI & resilient cloud microservices."
                     </span>
                   </div>
                 </div>

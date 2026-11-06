@@ -8,18 +8,17 @@ export const PROFILE = {
     "Software Engineer"
   ],
   tagline: "Building intelligent systems. Turning ideas into meaningful technology.",
-  bio: `Python Developer and AI/ML Engineer experienced in FastAPI backend services, privacy-preserving machine learning, and full-stack software development. Focused on building robust, scalable architectures and practical AI solutions.`,
+  bio: `Python Developer and AI/ML Engineer experienced in FastAPI backend services, federated machine learning, and full-stack software development. Focused on building robust, scalable architectures and practical AI solutions.`,
   shortBio: `Specializing in FastAPI backends, Federated Learning, and production ML pipelines.`,
   location: "Chennai, India",
-  email: "shreyavk18@gmail.com",
+  email: "shreyasonpavane.18@gmail.com",
   socials: {
-    github: "https://github.com/",
-    linkedin: "https://www.linkedin.com/in/",
+    github: "https://github.com/Shreya-1831",
+    linkedin: "https://www.linkedin.com/in/shreya-sonpavane-2b2b152a1",
     leetcode: "https://leetcode.com/u/shreya1831/",
   },
   metrics: [
     { label: "Core Focus", value: "AI/ML & Python" },
-    { label: "Specialization", value: "Federated Learning" },
     { label: "Experience", value: "2 Internships" },
     { label: "Leadership", value: "Club Secretary" },
   ],

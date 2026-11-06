@@ -36,7 +36,7 @@ export const App: React.FC = () => {
         {/* Education Section */}
         <EducationSection />
 
-        {/* Achievements & Leadership Section */}
+        {/* Achievements Section */}
         <AchievementsSection />
 
         {/* Contact Section */}
@@ -50,4 +50,3 @@ export const App: React.FC = () => {
 };
 
 export default App;
-

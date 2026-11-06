@@ -11,16 +11,16 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   },
   {
     title: "AI & Machine Learning",
-    description: "Intelligent systems, privacy-preserving architectures, and modern LLM paradigms.",
+    description: "Intelligent systems, federated architectures, and modern LLM paradigms.",
     skills: [
-      { name: "Federated Learning", featured: true, categoryTag: "Core Focus" },
+      // { name: "Federated Learning", featured: true, categoryTag: "Core Focus" },
       // { name: "Differential Privacy", featured: true, categoryTag: "Security" },
       { name: "Deep Learning", featured: true, categoryTag: "Neural Nets" },
       { name: "Machine Learning", featured: true, categoryTag: "Predictive" },
       // { name: "Natural Language Processing (NLP)", featured: true, categoryTag: "Text & Speech" },
       // { name: "Generative AI & LLMs", featured: true, categoryTag: "Modern AI" },
       // { name: "Retrieval-Augmented Gen (RAG)", featured: true, categoryTag: "Knowledge" },
-      { name: "Computer Vision", featured: false, categoryTag: "Image AI" }
+      { name: "Computer Vision", featured: true, categoryTag: "Image AI" }
     ]
   },
   {
@@ -43,7 +43,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
       { name: "HTML", featured: true, categoryTag: "Frontend" },
       { name: "CSS", featured: true, categoryTag: "Styling" },
       { name: "FastAPI", featured: true, categoryTag: "Backend" },
-      { name: "Flask", featured: false, categoryTag: "Backend" },
+      { name: "Flask", featured: true, categoryTag: "Backend" },
       { name: "REST API", featured: true, categoryTag: "API Development" }
     ]
   },
@@ -70,4 +70,3 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     ]
   }
 ];
-
